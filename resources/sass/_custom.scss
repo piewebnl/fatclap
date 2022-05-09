@@ -1,0 +1,107 @@
+/**
+ * Custom applies
+ */
+
+body {
+    @apply font-nunito text-nevada;
+}
+
+.container {
+    @apply rounded-lg p-6 bg-white border-gray-500;
+}
+
+a {
+    @apply text-zest;
+    &:hover {
+        @apply text-zest;
+        @apply underline;
+    }
+}
+
+// Headings
+h1 {
+    @apply text-3xl font-bold;
+}
+
+h2 {
+    @apply text-xl font-bold;
+}
+
+h3 {
+    @apply text-lg font-bold;
+}
+
+// Buttons
+button,
+.btn,
+.pagination a {
+    @apply inline-flex items-center rounded-xl px-3 py-2 mr-1 mb-2 border border-zest text-zest duration-200 ease-in-out justify-center cursor-pointer transition;
+    &:hover {
+        @apply bg-silver border-silver;
+        @apply no-underline;
+    }
+    &.active,
+    &:active {
+        @apply bg-white text-white;
+    }
+    &:focus {
+        @apply border-silver;
+    }
+    &:disabled {
+        @apply border-silver bg-white  text-silver cursor-default;
+    }
+}
+
+ion-icon {
+    @apply w-5 h-5 p-1;
+}
+
+.icon {
+    @apply w-10 h-10 p-1;
+}
+
+// Forms
+
+textarea,
+input[type]:not([type="submit"]) {
+    @apply border px-3 py-2 rounded-lg;
+}
+
+textarea {
+    @apply w-full;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    @apply w-5 h-5;
+}
+
+select {
+    @apply border px-2 py-2 rounded-lg;
+}
+
+label {
+    @apply block text-xl my-2;
+}
+
+.pagination {
+    .disabled a,
+    .active a {
+        @apply border-silver bg-white  text-silver cursor-default;
+    }
+}
+
+.mealtype-letter {
+    @apply flex items-center justify-center w-10 h-10 rounded-full mb-1 mr-1 bg-silver;
+}
+
+.odd-row-bg:nth-child(odd) {
+    @apply bg-gainsboro;
+}
+
+.menu-link {
+    @apply inline-flex justify-start p-2 bg-white bg-white text-zest text-lg border-0 rounded-none;
+    &:hover {
+        @apply bg-gainsboro no-underline;
+    }
+}
